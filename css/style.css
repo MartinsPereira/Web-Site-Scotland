@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Roboto', monospace;
+}
+
+body {
+  background: #000;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  padding: 10px;
+}
+
+.section_pad {
+  margin: 140px 0;
+}
+
+[data-anime='scroll'] {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+[data-anime='scroll'].ativo {
+  opacity: 1;
+}
+
+.intro {
+  background: url('../img/nathan-anderson-eSiMUVzG95w-unsplash.jpg');
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro img {
+  width: 100%;
+  position: absolute;
+}
+
+.intro img:nth-child(1) {
+  top: 0px;
+}
+
+.intro img:nth-child(2) {
+  top: 430px;
+  z-index: 2;
+}
+
+.intro h1 {
+  color: white;
+  z-index: 1;
+  font-size: 125px;
+  position: relative;
+}
+
+.intro_p {
+  margin: 90px 0 50px 0;
+}
+
+.intro_p p {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+}
+
+.geografia {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.geografia > div{
+  margin: 20px 0;
+}
+
+.titulo {
+  font-size: 30px;
+  color: #e9e319;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+}
+
+.texto {
+  color: white;
+  font-size: 15px;
+  width: 550px;
+  text-indent: 30px;
+  line-height: 28px;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide:hover {
+  will-change: transform;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+  width: 650px;
+}
+
+.slide li {
+  flex-shrink: 0;
+  width: 200px;
+  height: 325px;
+  max-width: 800px;
+  margin: 0 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.8;
+  transform: scale(0.8);
+  transition: 0.4s;
+}
+
+.slide li img {
+  height: 100%;
+}
+
+.slide li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+[data-control='slide'] {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+[data-control='slide'] li a {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #fb5;
+  border-radius: 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  margin: 5px;
+}
+
+[data-control='slide'] li.active a,
+[data-control='slide'] li a:hover {
+  background: #e54;
+}
+
+/* População */
+
+.populacao {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.populacao div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.populacao div:nth-child(2) p {
+  text-align: end;
+  float: right;
+}
+
+.populacao div:nth-child(2) h2 {
+  text-align: end;
+}
+
+/* Hístoria */
+
+.historia {
+  padding: 30px;
+}
+
+.historia h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.historia p {
+  color: white;
+  font-size: 15px;
+  text-indent: 30px;
+  line-height: 25px;
+  width: 100%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.economia {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.economia p {
+  line-height: 26px;
+  width: 450px;
+}
+
+.economia > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.economia > div:nth-child(2) > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  background: #dfd91e;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 17px;
+}
+
+@media (max-width:827px){
+  .titulo {
+    text-align: center !important;
+  }
+  .texto {
+    text-align: center;
+    width: 100% !important;
+  }
+  .populacao div:nth-child(2) p {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .populacao div:nth-child(1) {
+    order: 2;
+    margin-top: 15px;
+  }
+  .slide-wrapper {
+    width: 450px;
+  }
+}
+
+@media (max-width:550px){
+  .economia > div:nth-child(2) {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+
+  .geografia > div {
+    margin: 30px 0;
+  }
+
+  .slide li {
+    width: 140px;
+    height: 225px;
+  }
+
+  .intro h1 {
+    font-size: 20vw;
+  }
+
+  .slide-wrapper {
+    width: 300px;
+  }
+}
