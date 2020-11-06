@@ -5,6 +5,7 @@ import introAnimation from './introAnimation.js';
 
 const slides = new slideNav('.slide', '.slide-wrapper');
 slides.init();
+slides.addArrow('.prev', '.next')
 introAnimation();
 initAnimacaoScroll();
 initAnimaNumeros();

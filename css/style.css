@@ -171,6 +171,28 @@ img {
   background: #e54;
 }
 
+
+.arrow-nav {
+  display: none;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+
+.arrow-nav button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  width: 40px;
+  outline: none;
+  height: 40px;
+  background: #e2dc18 url('../img/arrow.svg') center center no-repeat;
+}
+
+.arrow-nav button.prev {
+  transform: rotate(-180deg);
+}
+
 /* População */
 
 .populacao {
@@ -306,5 +328,8 @@ img {
   }
   .intro_p p {
     padding: 0 15px;
+  }
+  .arrow-nav{
+    display: flex;
   }
 }
